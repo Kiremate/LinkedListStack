@@ -4,7 +4,6 @@
 #include <stdlib.h>  
 #include <crtdbg.h>  
 #include "Stack.h"
-#include "main.h"
 using namespace std;
 
 void test1();
