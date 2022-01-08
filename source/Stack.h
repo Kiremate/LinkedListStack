@@ -72,6 +72,12 @@ namespace bloodmask {
 			*this = src;
 		}
 		Stack& operator= (const Stack& src) {
+
+			if (!Empty()) {
+				delete topElement;
+				topElement = nullptr;
+			}
+
 			if (!src.Empty())
 				topElement = new Element(*src.topElement);
 

@@ -51,6 +51,9 @@ int main() {
 
 	test9();
 
+	_CrtDumpMemoryLeaks();
+
+
 	while (!_kbhit());
 	return 0;
 }
