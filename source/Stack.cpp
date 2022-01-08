@@ -14,8 +14,6 @@ int bloodmask::Stack::Pop()
 	else {
 		const int oldval = topElement->GetVal();
 		auto tmpElem = topElement;
-		
-
 		topElement = tmpElem->Disconnect();
 		delete tmpElem;
 		tmpElem = nullptr;
@@ -26,7 +24,10 @@ int bloodmask::Stack::Pop()
 
 int bloodmask::Stack::Size() const
 {
-	return topElement->CountElements();
+	if (!Empty)
+		return topElement->CountElements();
+	else
+		return 0;
 }
 
 bool bloodmask::Stack::Empty() const
