@@ -24,7 +24,7 @@ int bloodmask::Stack::Pop()
 
 int bloodmask::Stack::Size() const
 {
-	if (!Empty)
+	if (!Empty())
 		return topElement->CountElements();
 	else
 		return 0;

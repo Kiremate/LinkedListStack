@@ -26,5 +26,8 @@
     <ClInclude Include="..\source\Stack.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\source\main.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

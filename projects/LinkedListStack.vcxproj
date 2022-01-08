@@ -143,6 +143,7 @@
     <ClCompile Include="..\source\Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\source\main.h" />
     <ClInclude Include="..\source\Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
