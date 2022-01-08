@@ -12,13 +12,14 @@ int bloodmask::Stack::Pop()
 	if (Empty())
 		return -1;
 	else {
+		const int oldval = topElement->GetVal();
 		auto tmpElem = topElement;
-		topElement->value = tmpElem->pNext->value;
-		topElement = tmpElem->pNext;
+		
 
-		tmpElem->Disconnect();
+		topElement = tmpElem->Disconnect();
 		delete tmpElem;
 		tmpElem = nullptr;
+		return oldval;
 	}
 	return 0;
 }
