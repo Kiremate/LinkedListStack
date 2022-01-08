@@ -67,13 +67,26 @@ namespace bloodmask {
 		};
 
 	public:
+		Stack() = default;
+		Stack(const Stack& src) {
+			*this = src;
+		}
+		Stack& operator= (const Stack& src) {
+			if (!src.Empty())
+				topElement = new Element(*src.topElement);
 
+			return *this;
+		}
+		~Stack() {
+			delete topElement;
+			topElement = nullptr;
+		}
 		void Push(int value);
 		int Pop();
 		int Size() const;
 		bool Empty() const;
 
-		Element* topElement;
+		Element* topElement = nullptr;
 
 	};
 
